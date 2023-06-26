@@ -10,6 +10,13 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { DatabindingComponent } from './databinding/databinding.component';
+import{StudentdataService} from './studentdata.service';
+import { ServiceaccessComponent } from './serviceaccess/serviceaccess.component';
+import{HttpClientModule} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { HttpproductlistComponent } from './httpproductlist/httpproductlist.component';
+
 
 @NgModule({
   declarations: [
@@ -19,14 +26,22 @@ import { PipesComponent } from './pipes/pipes.component';
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    PipesComponent
+    PipesComponent,
+    DatabindingComponent,
+    ServiceaccessComponent,
+    HttpproductlistComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [
+    StudentdataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,24 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <h1 class="display-5 text-center text-primary">Product list accessed with httpcall</h1>
+        </div>
+
+        <div class="row p4">
+            <div class="col-md-3" *ngFor = "let item of objects">
+                <div class="card">
+                    <img class="card-img-top changeimgsize" [src]="item.image" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{item.category}}</h5>
+                        <p class="card-text text-center two-line-content">{{item.title}}</p>
+                        <h6 class="card-title text-center">{{item.price|currency:"INR"}}</h6>
+                        <a href="#" class="btn btn-success">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <p>{{objects}}</p>
+        </div>
+    </div>
+</section>

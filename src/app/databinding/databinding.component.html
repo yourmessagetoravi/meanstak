@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <div class="row">
+          <div *ngIf="students.length>0 ; then available else notavailable">
+
+          </div>
+          <ng-template #available>
+            <ul *ngFor="let student of students">
+                <li>{{student.idno}}</li>
+                <li>{{student.name|uppercase}}</li>
+                <li>{{student.grade}}</li>
+            </ul>
+          </ng-template>
+          <ng-template #notavailable>
+            data is not available
+          </ng-template>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Data from Services</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Grage</th>
+                        <th scope="col">Department</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let student of studentsData">
+                        <th scope="row">{{student.idno}}</th>
+                        <td>{{student.name|uppercase}}</td>
+                        <td>{{student.grade}}</td>
+                        <td>{{student.dept}}</td>
+                      </tr>
+                
+                    </tbody>
+                  </table>
+                  <div class="row">
+                    {{studentsData|json}}
+                  </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+</section>
